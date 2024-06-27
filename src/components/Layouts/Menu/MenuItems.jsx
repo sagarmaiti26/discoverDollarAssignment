@@ -32,8 +32,11 @@ const MenuItems = ({ items, depthLevel }) => {
     window.innerWidth > 960 && setDropdown(false);
   };
 
-  const closeDropdown = () => {
-    dropdown && setDropdown(false);
+  const closeDropdown = (e) => {
+    // Only close if clicking outside of Autocomplete
+    if (!e.target.closest('.MuiAutocomplete-root')) {
+      setDropdown(false);
+    }
   };
 
   return (
@@ -47,7 +50,7 @@ const MenuItems = ({ items, depthLevel }) => {
       {items.url && items.submenu ? (
         <>
           <button
-            className="flex"
+            className="flex "
             type="button"
             aria-haspopup="menu"
             aria-expanded={dropdown ? "true" : "false"}
@@ -76,7 +79,7 @@ const MenuItems = ({ items, depthLevel }) => {
             )}
             {depthLevel > 0 && window.innerWidth < 960 ? null : depthLevel >
                 0 && window.innerWidth > 960 ? (
-              <span>&raquo;</span>
+              <span className="arrow ml-5 mt-1 -rotate-90 inline-block"></span>
             ) : (
               <span />
             )}

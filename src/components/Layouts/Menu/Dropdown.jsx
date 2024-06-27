@@ -38,7 +38,7 @@ const Dropdown = ({ submenus, items, dropdown, depthLevel }) => {
           onChange={(event, newValue) => {
             if (newValue && newValue.url) {
               navigate(newValue.url);
-             
+              
             }
           }}
         />

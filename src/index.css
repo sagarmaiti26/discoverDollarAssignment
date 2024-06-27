@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body {
     background-color: #f1f3f6;
     font-family: 'Roboto', sans-serif;
@@ -101,5 +102,5 @@ body {
   display: none;
 }
 .MuiAutocomplete-popper {
-  z-index: 1500; 
+  z-index: 1500; /* Adjust this value as needed */
 }
