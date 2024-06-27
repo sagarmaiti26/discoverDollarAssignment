@@ -1,5 +1,5 @@
 
-import Categories from "../Layouts/Categories";
+import Categories from "../Layouts/Menu/Categories";
 import Banner from "./Banner/Banner";
 import DealSlider from "./DealSlider/DealSlider";
 
