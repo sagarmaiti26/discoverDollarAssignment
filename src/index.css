@@ -97,3 +97,9 @@ body {
   color: #cc3852;
   margin-right: 10px;
 }
+.dropdown.hide {
+  display: none;
+}
+.MuiAutocomplete-popper {
+  z-index: 1500; 
+}
