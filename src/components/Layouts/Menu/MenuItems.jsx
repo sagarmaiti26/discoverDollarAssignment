@@ -64,12 +64,12 @@ const MenuItems = ({ items, depthLevel }) => {
                       draggable="false"
                       className="h-full w-full object-contain "
                       src={items.icon}
-                      alt={items.title}
+                      alt={items.label}
                     />
                   </div>
                 )}
                 <span className="text-sm text-gray-800 font-medium group-hover:text-primary-blue">
-                  {items.title}
+                  {items.label}
                   {depthLevel === 0 && <span className="arrow"/>}
                 </span>
               </Link>
@@ -82,6 +82,7 @@ const MenuItems = ({ items, depthLevel }) => {
             )}
           </button>
           <Dropdown
+          items={items}
             depthLevel={depthLevel}
             submenus={items.submenu}
             dropdown={dropdown}
@@ -95,9 +96,10 @@ const MenuItems = ({ items, depthLevel }) => {
             aria-expanded={dropdown ? "true" : "false"}
             onClick={() => setDropdown((prev) => !prev)}
           >
-            {items.title} {depthLevel > 0 ? <span>&raquo;</span> : <span />}
+            {items.label} {depthLevel > 0 ? <span>&raquo;</span> : <span />}
           </button>
           <Dropdown
+            items={items}
             depthLevel={depthLevel}
             submenus={items.submenu}
             dropdown={dropdown}
@@ -114,17 +116,17 @@ const MenuItems = ({ items, depthLevel }) => {
                 draggable="false"
                 className="h-full w-full object-contain"
                 src={items.icon}
-                alt={items.title}
+                alt={items.label}
               />
             </div>
           )}
           {depthLevel === 0 ? (
             <div className=" text-gray-800 font-medium group-hover:text-primary-blue text-center ">
-              {items.title}
+              {items.label}
             </div>
           ) : (
             <span className="  text-gray-800 font-normal">
-              {items.title}
+              {items.label}
             </span>
           )}
         </Link>
