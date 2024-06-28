@@ -109,7 +109,7 @@ export const MenuItem = [
           { label: "Stove & Gas", url: "stovegas" },
         ],
       },
-      { label: "Home Decos", url: "homedecos" },
+      { label: "Home Decors", url: "homedecos" },
       {
         label: "Tables",
         url: "tables",
@@ -127,7 +127,7 @@ export const MenuItem = [
     icon: furniture,
   },
   {
-    label: "Beauty,Toys & more",
+    label: "Beauty & Toys",
     url: "beautytoysmore",
     icon: beauty,
     submenu: [
